@@ -103,17 +103,17 @@
             // Sticky Menu
             //-------------------------------
             if ($('#sticky-header').length) {
-                 
+
                 if (typeof(Sticky_Nav) != "undefined") {
-                    if ( Sticky_Nav == true ) { 
+                    if ( Sticky_Nav == true ) {
                         var stickyMenu = $('#main-nav ul.menu-list').clone();
                         stickyMenu.appendTo('#sticky-header .sticky-left .menu-content');
                     }
                 }
                 $('#header-top .header-social').clone().appendTo('#sticky-header .sticky-right .sticky-social');
-                
+
                 if (typeof(Sticky_Nav) != "undefined") {
-                    if ( Sticky_Nav == true ) { 
+                    if ( Sticky_Nav == true ) {
                         $(window).scroll(function () {
                             var w = $(window).width();
                             if (w > 992) {
@@ -353,8 +353,7 @@
          --------------------------------------------- */
         twitter_feed: function () {
             if (typeof(Twitter_Widget) != "undefined") {
-                var twitter_section = '<a class="twitter-timeline" href="' +Twitter_Widget['profile_url']+ '" data-widget-id="' + Twitter_Widget['twitter_id'] + '" data-link-color="#0062CC" data-chrome="nofooter noscrollbar transparent" data-tweet-limit="' + Twitter_Widget['post_count'] + '">Tweets</a>';
-                twitter_section += '<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?"http":"https";if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+\"://platform.twitter.com/widgets.js\";fjs.parentNode.insertBefore(js,fjs);}}(document,\"script\",\"twitter-wjs\");</script>';
+                var twitter_section = '<a class="twitter-timeline" data-show-replies="true" href="https://twitter.com/' +Twitter_Widget['screen_name']+ '">Tweets by @' +Twitter_Widget['screen_name']+ '</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>';
 
                 $('.widget_twitter .widget-content').append(twitter_section);
             }
@@ -365,7 +364,7 @@
          --------------------------------------------- */
         mailchip: function() {
             if (typeof(Mailchimp_Widget) != "undefined") {
-                if($('#newsletter-form').length) {            
+                if($('#newsletter-form').length) {
                     var ramble_success_btn_text = Mailchimp_Widget['success_btn_text'];
                     $('#newsletter-form').formchimp({
                         'buttonText': "" + ramble_success_btn_text + "",
