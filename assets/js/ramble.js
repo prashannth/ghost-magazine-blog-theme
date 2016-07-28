@@ -353,7 +353,7 @@
          --------------------------------------------- */
         twitter_feed: function () {
             if (typeof(Twitter_Widget) != "undefined") {
-                var twitter_section = '<a class="twitter-timeline" data-show-replies="true" href="https://twitter.com/' +Twitter_Widget['screen_name']+ '">Tweets by @' +Twitter_Widget['screen_name']+ '</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>';
+                var twitter_section = '<a class="twitter-timeline" data-show-replies="true" href="https://twitter.com/' +Twitter_Widget['screen_name']+ '" data-link-color="#0062CC" data-chrome="nofooter noscrollbar transparent" data-tweet-limit="' + Twitter_Widget['post_count'] + '"></a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>';
 
                 $('.widget_twitter .widget-content').append(twitter_section);
             }
