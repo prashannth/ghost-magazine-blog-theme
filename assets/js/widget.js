@@ -5,7 +5,7 @@
 (function($) {
      "use strict";
 
-     
+
     //Sticky Aria Settings
     var post_styles = getUrlParameter('post_style');
     if (typeof( post_styles ) != "undefined") {
@@ -92,7 +92,7 @@
 	         }
 	         $('.header-widget .author-social').append("<a target='blank' href='" + Header_Author_Widget[Url] + "'><i class='fa fa-" + Url + "'></i></a>");
 	     }
-    
+
     	$('.header-widget #author-image .image').attr('style','background:url('+Header_Author_Widget['Image']+')');
     	$('.header-widget .author-name').html(Header_Author_Widget['Name']);
     	$('.header-widget #author-details .author-skill').html(Header_Author_Widget['Skill']);
@@ -120,7 +120,7 @@
 	         $('#footer-bottom .social-link').append("<a target='blank' href='" + Footer_Social[Url] + "'><i class='fa fa-" + Url + "'></i><span>"+Url+"</span></a>");
 	     }
     }
-    
+
     //Latest Post Widget
     if (typeof(Latest_Posts_Widget) != "undefined") {
     	if (Latest_Posts_Widget['show'] === true) {
@@ -211,8 +211,7 @@
     	    var twitter_widget_id = Twitter_Widget['twitter_id'];
     	    $('.ghost_twitter_widget').removeClass('hidden');
     	    $('.ghost_twitter_widget_title').html(Twitter_Widget['widget_title']);
-    	    var twitter_section = '<a class="twitter-timeline" href="' + tp_url + '" data-widget-id="' + twitter_widget_id + '" data-link-color="#0062CC" data-chrome="nofooter noscrollbar" data-tweet-limit="' + tp_count + '">Tweets</a>';
-    	    twitter_section += "<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+\"\://platform.twitter.com/widgets.js\";fjs.parentNode.insertBefore(js,fjs);}}(document,\"script\",\"twitter-wjs\");</script>";
+            var twitter_section = '<a class="twitter-timeline" data-show-replies="true" href="https://twitter.com/' +Twitter_Widget['screen_name']+ '">Tweets by @' +Twitter_Widget['screen_name']+ '</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>';
     	    $('.twitter_profile').append(twitter_section);
     	}
     }
@@ -265,7 +264,7 @@
     // Footer Top Widget
     var footer_widget = getUrlParameter('footer-newsletter-widget');
     if (typeof(footer_widget) != "undefined") {
-        if ( footer_widget == "show" ) { 
+        if ( footer_widget == "show" ) {
             $('#footer-top').removeClass('hidden');
         } else {
             $('#footer-top').html('');
@@ -274,7 +273,7 @@
         if (typeof(Footer_Top_Section) != "undefined") {
             $('.footer-top-content .news-letter-title').html( Footer_Top_Section['newsletter_title']);
             $('.footer-top-content .social-area span').html( Footer_Top_Section['social_title']);
-            if ( Footer_Top_Section['show'] == true ) { 
+            if ( Footer_Top_Section['show'] == true ) {
                 $('#footer-top').removeClass('hidden');
             } else {
                 $('#footer-top').html('');
@@ -322,5 +321,5 @@
     	    $('#author-skill .author-skills-items').append('<div class="col-md-4"><div class="skill-details"><div class="skill-percentage"><div class="skill" data-startdegree="'+About_Page_skills[Url][0]+'" data-dimension="120" data-text="'+About_Page_skills[Url][0]+'%" data-width="30" data-fontsize="18" data-percent="'+About_Page_skills[Url][0]+'" data-fgcolor="#95cac5" data-bgcolor="#eee"></div></div><div class="skill-content"><h4>'+Url+'</h4><p>'+About_Page_skills[Url][1]+'</p></div></div></div>');
     	}
     }
-        
+
 })(jQuery);
