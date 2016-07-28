@@ -1,0 +1,76 @@
+#featured {
+	margin-top: -1px;
+	position: relative;
+	#featured-content .col-md-12 {
+		padding: 0 2px;
+	}
+	#featured-slider .item .post-thumb {
+        background-position: 50% 50% !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+		height: 0;
+		position: relative;
+		width: 100%;
+		padding-top: 115%;
+		@include prefixed(backface-visibility, hidden);
+	}
+	.item .post-content {
+		bottom: 0;
+		left: 0;
+		opacity: 0;
+		padding: 20px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		@include prefixed(transition, opacity 0.3s ease);
+		@include prefixed(backface-visibility, hidden);
+	}
+	#featured-slider .item {
+		position: relative;
+	}
+	.cat-links {
+		color: $color__white;
+		font-size: 12px;
+		font-weight: bold;
+		letter-spacing: 0.025em;
+		text-transform: uppercase;
+	}
+	.cat-links a:hover {
+		color: $color__white !important;
+	}
+	.cat-links .border {
+		background: $color__white;
+		display: block;
+		height: 2px;
+		margin-top: 2px;
+		position: relative;
+		width: 45px;
+	}
+	.post-content .bottom-content {
+		bottom: 20px;
+		left: 20px;
+		position: absolute;
+		right: 20px;
+	}
+	.post-content .entry-title {
+		color: $color__white;
+		font-size: 22px;
+	}
+	.post-content .entry-title a:hover {
+		border-bottom: 0 none;
+	}	
+	.post-content .entry-title a:active,
+	.post-content .entry-title a:focus,
+	.post-content .entry-title a:focus.active {
+		color: $color__white;
+	}	
+	.post-content .entry-meta {
+		color: $color__white;
+	}	
+	.entry-meta a:hover {
+		color: $color__white;
+	}
+	.item .post-content:hover {
+		opacity: 1;
+	}
+}

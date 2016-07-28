@@ -1,0 +1,58 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! This bellow code is for loading header aria}}
+{{> "header"}}
+
+<!-- Featured Area
+================================================== -->
+{{#is "home"}}
+    {{> "featured-loop"}}
+{{/is}}
+<!-- Content
+================================================== -->
+<div id="content" class="site-content">
+	<div class="container">
+		<div class="row">
+			<div id="main-aria" class="col-md-9">
+				<!-- Content Area -->
+				<div id="primary" class="content-area">
+					<main id="main" class="site-main">
+                        <div class="row">
+                            {{#is "home"}}                              
+                                <div id="featured_post_section" class="col-md-12 hidden">
+                                    {{#foreach posts}}
+                                        {{#if featured}}
+                                            {{^has tag="sticky"}} 
+                                                {{> "sticky-loop"}}
+                                            {{/has}}
+                                        {{/if}}
+                                    {{/foreach}}                                
+                                </div> 
+                            {{/is}}
+                            <div class="col-md-12">                                
+                                <div class="grid-post" id="grid-three">
+                                {{#is "home"}} 
+                                    <h3 class="section-title hidden"><span>Latest Posts in Our Blog</span></h3>
+                                {{/is}}
+                                    {{#foreach posts}}
+                                        {{#unless featured}}
+                                            {{^has tag="sticky"}}
+                                                {{> "loop"}} 
+                                            {{/has}}                              
+                                        {{/unless}}
+                                    {{/foreach}}
+                                </div> <!-- /.grid-post -->
+                            </div> <!-- /.col-md-12 -->
+                        </div> <!-- /.row -->
+					</main> <!-- #main -->
+                    {{! Previous/next page links - displayed on every page }}
+                    {{pagination}}                    
+				</div> <!-- #primary -->
+			</div> <!-- /.col-md-9 -->
+            <div id="main-sidebar" class="col-md-3">
+                {{> "sidebar"}}
+            </div> <!-- /.col-md-3 -->
+		</div> <!-- /.row -->
+	</div> <!-- /.container -->
+</div><!-- #content -->

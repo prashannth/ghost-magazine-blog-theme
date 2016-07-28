@@ -1,0 +1,159 @@
+button {
+    font-size: 11px;
+    padding: 12px 30px;
+	color: $color__white;
+	line-height: normal;
+	@include prefixed(transition, all .25s ease);
+}
+input[type="button"] {
+	@extend button;
+}
+input[type="reset"] {
+	@extend button;
+}
+input[type="submit"] {
+	@extend button;
+	font-weight: bold;
+	text-transform: uppercase;
+	background: $color__border-five;
+	color: $color__white;
+	&:hover {
+		color: $color__white;
+	}
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+	&:focus {
+		outline: none;
+	}	
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+button {
+	a {
+		color: $color__white;
+	}
+}
+.search-form, .searchform {
+	.btn {
+		@include prefixed(border-radius, 0);
+		&:hover {
+			color: $color__white;
+			text-decoration: none;		
+		}
+		&:focus {
+			background: transparent;
+			color: $color__white;
+			outline: 0 none;
+		}
+		&:active:focus {
+			background: transparent;
+			color: $color__white;
+			outline: 0 none;
+		}
+	}
+}
+.btn {
+	@include prefixed(border-radius, 0);
+}
+.btn-default {
+	color: $color__text-main;
+	&:hover {
+		color: $color__text-main;
+	}
+}
+
+.more-link {
+	font-size: 12px;
+	font-weight: bold;
+	//line-height: normal;
+	text-transform: uppercase;
+	word-spacing: 0.2em;
+	letter-spacing: 0.1em;
+	color: $color__white;
+	display: table;
+	margin: 35px auto 0;
+	//padding: 20px 53px;
+	//height: 5em;
+	width: 28.2%;
+	line-height: 4.75em;
+	text-align: center;
+	vertical-align: middle;
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	position: relative;
+	overflow: hidden;
+	@include prefixed(transition, all 0.25s ease);
+	&:hover, &:focus, &:active:focus {
+		color: $color__white;
+		text-decoration: none !important;
+	}
+}
+.comment-reply-link {
+	padding: 6px 22px;
+	font-size: 11px;
+	line-height: normal;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: inline-block;
+	background: $color__black;
+	color: $color__white;
+	@include prefixed(transition, all 0.35s ease);
+	&:hover {
+		color: $color__white;
+	}
+}
+.form-submit {
+	#submit {
+		background: $color__black;
+		color: $color__white;
+		@include prefixed(transition, all 0.35s ease);
+	}
+}
+.comment-navigation {
+	.nav-links {
+		a {
+			background: $color__white;
+			display: inline-block;
+			padding: 0.5em 1.8em;
+			letter-spacing: 0.02em;
+			&:hover {
+				color: $color__white;
+			}
+		}	
+	}
+}
+.go-button {
+	font-size: 11px;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: inline-block;
+	width: 186px;
+	height: 45px;
+	line-height: 46px;
+	background: $header__footer-bg;
+	@include prefixed(transition, all 0.3s ease);
+	&:hover {
+		color: $color__white;
+	}
+}
+
+.entry-content {
+	.btn {
+		@include prefixed(border-radius, 1px);
+		letter-spacing: 0;
+		line-height: 1.7em;
+	}
+}
+
+.mfp-wrap {
+	button:hover {
+		background: transparent !important;
+	}
+}

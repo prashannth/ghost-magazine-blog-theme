@@ -1,0 +1,139 @@
+.contact-page {
+	.header-title {
+		margin-bottom: 0;
+	}
+	#gmaps {
+		height: 30em;
+		background: $color__background-main;
+	}
+	#address-main {
+		margin: auto auto 45px;
+		text-align: center;
+		width: 35%;
+	}
+	#address-main:before {
+		background: #f0f0f0;
+		content: "";
+		height: 1px;
+		left: 0;
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		margin-top: -22px;
+	}
+	#address-main span {
+		background: $color__white;
+		display: inline-block;
+		padding: 0 15px;
+		position: relative;
+		word-spacing: 2px;
+	}
+	.contact-details {
+		padding-top: 15px;
+	}
+	.contact-details > .row .col-md-4.col-sm-6 {
+		padding: 25px;
+	}	
+	.contact-details .col-md-4.col-sm-6 .box {
+		border: 1px solid $color__border-one;
+		padding: 35px;
+		position: relative;
+	}	
+	.contact-details .col-md-4.col-sm-6 .icon-area {
+		display: table;
+		left: 0;
+		line-height: normal;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: auto;
+		position: absolute;
+		right: 0;
+		top: -35px;
+	}	
+	.contact-details .col-md-4.col-sm-6 .icon-area .fa {
+		background: $color__white;
+		border: 1px solid $color__border-one;
+		font-size: 25px;
+		padding: 20px 30px;
+		position: relative;
+	}
+	.details {
+		margin-top: 20px;
+		position: relative;
+		text-align: center;
+	}
+	.details span {
+		font-family: $font__heading;
+		font-size: 13px;
+	}
+	.contact-details > .row:first-child {
+		margin: 0;
+	}
+	.post img, 
+	.page img {
+	    max-width: none;
+	}
+	.entry-content {
+		margin-bottom: 45px;
+		margin-top: 10px;
+		position: relative;
+	}
+	#contact-form-wrap {
+		margin-top: 45px;
+		.contact-respond {
+			.col-md-12 {
+				@media only screen and (max-width: 992px) {
+					padding: 0;
+				}
+			}
+		}
+	}
+	.padding-left {
+		padding-left: 0.5em;
+	}
+	.padding-right {
+		padding-right: 0.5em;
+	}
+	.padding-left-right {
+		padding: 0 0.5em;
+	}
+	.contact-respond {
+		margin-top: 30px;
+		p {
+			margin-bottom: 1em;
+		}
+		.form-submit {
+			margin-bottom: 0;
+		}
+		#submit {
+			background: $color__black;
+		}
+	}
+	#name,
+	#email,
+	#subject {
+		height: 45px;
+	}
+	span.wpcf7-not-valid-tip {
+	    color: #df2626;
+	    display: block;
+	    font-size: 0.8em;
+	    margin-bottom: -10px;
+	    margin-left: 4px;
+	    margin-top: 3px;
+	}
+	div.wpcf7-validation-errors {
+		border: 1px solid #efdf35;
+		color: #df2626;
+	}
+	div.wpcf7-mail-sent-ng {
+		border: 1px solid #df2626;
+	} 
+	div.wpcf7-response-output {
+		padding: 0.4em 1em;
+		margin: 0;
+	}
+	.wpcf7-mail-sent-ok {
+		border-width: 1px;
+	}
+}

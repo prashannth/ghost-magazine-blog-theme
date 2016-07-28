@@ -1,0 +1,122 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! This bellow code is for loading header aria}}
+{{> "header"}}
+
+{{! This code to show Post in single page }}
+{{#post}}
+    <!-- Content
+    ================================================== -->
+	<div id="content" class="site-content single-post">
+		<div class="container">
+			<div class="row">
+				<div id="post-aria" class="col-md-9">
+					<!-- Content Area -->
+					<div id="primary" class="content-area">
+						<main id="main" class="site-main">
+                            <article class="post hentry">
+                                {{#if image}}
+                                <figure class="post-thumb">
+                                    <img src="{{image}}" class="img-responsive" alt="{{title}}">
+                                </figure> <!-- /.post-thumb -->
+                                {{/if}}
+                                <header class="entry-header">
+                                    <div class="cat-links">
+                                        {{tags separator=" "}}
+                                    </div>
+                                    <h2 class="entry-title">{{title}}</h2>
+                                    <div class="entry-meta">
+                                        <div class="meta-content">               
+                                            <div class="meta">
+                                                <span class="byline">
+                                                    <span class="author vcard">
+                                                        By: {{author}}
+                                                    </span>
+                                                </span>
+                                            </div> <!-- /.meta -->
+                                        </div>
+                                    </div> <!-- .entry-meta -->
+                                </header> <!-- /.entry-header -->
+                                <div class="entry-content">
+                                    {{content}}
+                                </div> <!-- .entry-content -->
+                                <footer class="entry-footer clearfix">                          
+                                    <div class="footer-meta clearfix">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <th class="post-comment">
+                                                        <a class="comments-link" href="{{url}}#disqus_thread">0 Comments</a>
+                                                    </th>
+                                                    <th class="post-view-mobile">
+                                                        <span class="view-link">{{date format="DD MMMM YYYY"}}</span>
+                                                    </th>
+                                                    <th class="share-area">
+                                                        <script type="text/javascript">
+                                                            function Ramble_PopupWindow(url, title, w, h) {
+                                                                var left = (screen.width / 2) - (w / 2);
+                                                                var top = (screen.height / 2) - (h / 2);
+                                                                return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+                                                            }
+                                                            
+                                                        </script>
+
+                                                        <!-- facebook share -->
+                                                        <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute='true'}}" onclick="Ramble_PopupWindow(this.href, 'facebook-share', 580, 400); return false;"><span class="fa fa-facebook"></span></a>
+
+                                                        <!-- twitter share -->
+                                                        <a href="https://twitter.com/home?status={{url absolute='true'}}" onclick="Ramble_PopupWindow(this.href, 'facebook-share', 580, 400); return false;"><span class="fa fa-twitter"></span></a>
+
+                                                        <!-- google plus share -->
+                                                        <a href="https://plus.google.com/share?url={{url absolute='true'}}" onclick="Ramble_PopupWindow(this.href, 'google-plus-share', 550,530); return false;"><span class="fa fa-google-plus"></span></a>
+
+                                                        <!-- pinterest share -->
+                                                        <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><span class="fa fa-pinterest-p"></span></a>
+
+                                                        <!-- linkedin share -->
+                                                        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{url absolute='true'}}" onclick="Ramble_PopupWindow(this.href, 'linkedin-share', 550,530); return false;"><span class="fa fa-linkedin"></span></a>
+                                                    </th>
+                                                    <th class="post-view">
+                                                        <span class="view-link">{{date format="DD MMMM YYYY"}}</span>
+                                                    </th>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div> <!-- /.footer-meta -->
+                                </footer> <!-- .entry-footer -->
+                            </article> <!-- /.post-->
+                            <!-- pagination -->
+                            <nav class="post-navigation">
+                                <ul class="nav-links">
+                                    {{#next_post}}
+                                    <li class="nav-previous pull-left"> <!-- disabled add when no pagination -->
+                                        <a href="{{url}}"><span class="fa fa-angle-double-left"></span>Previous Posts</a>
+                                    </li>
+                                    {{/next_post}}
+                                    {{#prev_post}}
+                                    <li class="nav-next  pull-right">
+                                        <a href="{{url}}">Next Posts<span class="fa fa-angle-double-right"></span>
+                                        </a>
+                                    </li>
+                                    {{/prev_post}}
+                                </ul>
+                            </nav> <!-- /.navigation -->
+                            {{! This code is for include author info }}
+                            {{> "author-profile"}}
+                            <div class="related-post">
+                                <h3 class="related-post-title"><span>You May Like Also</span></h3>
+                                <div class="row" id="related-post-wrap"></div> <!-- /.row -->    
+                            </div> <!-- /.related-post -->
+                            {{! Code for Disqus Comment}}
+                            {{> "comments-disqus"}}
+						</main> <!-- #main -->
+				    </div> <!-- #primary -->
+				</div> <!-- /.col-md-9 -->
+                <div id="post-sidebar" class="col-md-3">
+                    {{> "sidebar"}}
+                </div> <!-- /.col-md-3 -->
+			</div> <!-- /.row -->
+		</div> <!-- /.container -->
+	</div><!-- #content -->
+{{/post}}

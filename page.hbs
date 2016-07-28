@@ -1,0 +1,44 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! This bellow code is for loading header aria}}
+{{> "header"}}
+
+{{! This code to show Post in single page }}
+{{#post}}
+    <!-- Content
+    ================================================== -->
+	<div id="content" class="site-content single-post">
+		<div class="container">
+			<div class="row">
+				<div id="page-aria" class="col-md-9">
+					<!-- Content Area -->
+					<div id="primary" class="content-area">
+						<main id="main" class="site-main">
+                            <article class="post hentry">
+                                {{#if image}}
+                                <figure class="post-thumb">
+                                    <img src="{{image}}" class="img-responsive" alt="{{title}}">
+                                </figure> <!-- /.post-thumb -->
+                                {{/if}}
+
+                                <header class="entry-header">
+                                    <h2 class="entry-title">{{title}}</h2>
+                                </header> <!-- /.entry-header -->
+
+                                <div class="entry-content">
+                                    {{content}}
+                                </div> <!-- .entry-content -->
+                                
+                            </article> <!-- /.post-->
+                            
+						</main> <!-- #main -->
+					</div> <!-- #primary -->
+				</div> <!-- /.col-md-9 -->
+                <div id="page-sidebar" class="col-md-3">
+                    {{> "sidebar"}}
+                </div> <!-- /.col-md-3 -->
+			</div> <!-- /.row -->
+		</div> <!-- /.container -->
+	</div><!-- #content -->
+{{/post}}

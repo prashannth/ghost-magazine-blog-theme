@@ -1,0 +1,37 @@
+{{#author}}
+<!-- author-info -->
+<div class="author-info clearfix">
+    <table>
+        <tbody>
+            <tr>
+                <td id="author-img">
+                    <figure class="at-img">
+                        <img src="{{image}}" alt="{{name}}">
+                    </figure>
+                </td>
+                <td id="post-author-details">
+                    <div class="authors-bio">
+                        <h3 class="author-name">{{name}}</h3> 
+                        {{#if bio}}
+                            <p>{{bio}}</p>
+                        {{/if}}
+                    </div>
+                    <footer id="author-meta" class="clearfix">
+                        <div class="post-count">
+                            <b> {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</b>
+                        </div> <!-- /.post-count -->
+
+                        <div class="authors-social">
+                            {{^is "author"}}
+                                <i class="fa fa-map-marker"></i>&nbsp; {{location}}
+                            {{else}}
+                                <i class="fa fa-link"></i> <a target="_blank" href="{{website }}">{{website }}</a>
+                            {{/is}}
+                        </div> 
+                    </footer>  <!-- /#author-meta --> 
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div> <!-- /.author-info -->
+{{/author}}

@@ -1,0 +1,145 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <!-- Basic Page Needs
+        ================================================== -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{{code}} — {{message}}</title>
+        <meta name="description" content="{{meta_description}}" />
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Favicons
+        ================================================== -->
+        <link rel="shortcut icon" href="/assets/images/favicon.ico">
+
+        <!-- Custom Font
+        ================================================== -->
+        <link href='https://fonts.googleapis.com/css?family=Great+Vibes%7CLato:400,400italic,700,700italic%7CMontserrat:400,700%7CPlayfair+Display:400' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{{asset "fonts/font-awsome/css/font-awesome.min.css"}}">
+
+        <!-- CSS
+        ================================================== -->
+        <link rel="stylesheet" href="{{asset "css/bootstrap/css/bootstrap.min.css"}}">
+        <link rel="stylesheet" href="{{asset "css/plugin.css"}}">
+        <link rel="stylesheet" href="{{asset "css/screen.css"}}">
+        <link rel="stylesheet" href="{{asset "colors/color-schemer.css"}}">
+
+        <!-- Modernizr
+        ================================================== -->
+        <script src="{{asset "js/vendor/modernizr-2.8.3.min.js"}}"></script>
+        <script src="{{asset "js/vendor/jquery-1.11.3.min.js"}}"></script> <!-- jQuery -->
+        <script src="{{asset "js/vendor/jquery-migrate.min.js"}}"></script> <!-- jQuery-migrate -->
+        <script src="{{asset "js/header.js"}}"></script> <!-- Header Loaded Javascript funcions -->
+        {{! Ghost outputs important style and meta data with this tag }}
+        {{ghost_head}}
+    </head>
+
+    <body class="error-page">
+        <header id="masthead" class="site-header">
+           <!-- Header Mobile -->
+            <div id="header-mobile">
+               <!-- Mobile Menu -->
+                <div class="header-mobile-area">               
+                    <div class="menucontent overlaybg"></div>
+                    <div class="menuexpander slideRight">
+                        <a id="navToggle" class="animated-arrow slideLeft"><span></span></a>
+                        <span id="menu-marker"></span>
+                    </div>
+                </div> <!-- /.header-mobile-area -->
+                <div id="mobile-menu">
+                    <nav class="top-menu slideLeft clearfix">
+                        <div class="menu-wrapper">
+                            <div id="menu-wrap"></div>             
+                        </div> <!-- /.menu-wrapper -->
+                    </nav> <!-- /.menu  -->
+                </div> <!-- /.#mobile menu -->
+                <div id="mobile-search">
+                    <div class="mobile-search-wrap slideLeft clearfix"></div> <!-- /.mobile-search-wrap -->
+                </div> <!-- /#mobile-search -->
+            </div> <!-- /#header-mobile -->
+            
+            <!-- Header Middle Part-->
+            <div id="header-middle">
+                <div class="container">
+                    <div class="row">
+                        <div class="header-banner col-md-12">
+                            <!-- Site Logo -->
+                            <div id="site-logo">
+                                <a href="{{@blog.url}}" id="site-logo-main" class="site-logo">
+                                    {{#if @blog.logo}}
+                                    <div class="logo" style="background-image:url({{@blog.logo}})"></div>
+                                    {{else}}
+                                    <div class="logo" style="background-image:url({{@blog.url}}/assets/images/logo.png)"></div>
+                                    {{/if}}
+                                </a> 
+                            </div> <!-- /#site-logo -->
+
+                            <!-- Main Navigation -->
+                            <nav id="main-nav" class="site-navigation top-navigation">
+                                <div class="menu-wrapper">
+                                    <div class="menu-content">
+                                        {{navigation}}
+                                    </div>
+                                </div> <!-- /.menu-wrapper --> 
+                            </nav> <!-- /#main-nav -->                  
+                        </div> <!-- /.col-md-9 -->
+                    </div> <!-- /.row -->
+                </div> <!-- /.container --> 
+            </div> <!-- /#header-middle -->
+        </header> <!-- /.site-header -->
+        <!-- Content
+        ================================================== -->
+        <div id="content" class="site-content error-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 full-width-content">
+                        <!-- Error Page Search Part -->
+                        <div class="error-search"> 
+                            <div class="error-image clearfix">
+                                <img src="{{@blog.url}}/assets/images/404-one.png" alt="Error Image" class="img-responsive">
+                                <div class="goto-button">                
+                                    <a href="{{@blog.url}}" class="go-to">Homepage</a>
+                                    <a href="{{@blog.url}}/contact" class="go-to">Contact</a>
+                                </div> <!-- /.goto-button -->
+                            </div> <!-- /.error-image -->
+
+                            <div class="search">                                
+                                <form class="search-form">
+                                    <div class="input-group">
+                                        <input type="search" placeholder="Search Here..." id="" class="form-controller heading-search" >
+                                        <span class="input-group-btn">
+                                            <button id="submit-btn" type="button" class="btn btn-search"><i class="fa fa-search"></i></button>
+                                        </span>
+                                    </div>
+                                </form>
+                                <div style="position: inherit;" id="heading-search-result" class="heading-search-result"></div>
+                            </div> <!-- /.search -->
+                        </div> <!-- /.error-search -->
+                    </div> <!-- /.col-md-8 --> 
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->        
+        </div><!-- #content -->
+
+        <footer id="colophon" class="site-footer">
+            <div id="footer-bottom">
+                <div class="copy-right-area">                
+                    <div class="container">
+                        <div class="copyright">
+                            <p>Copyright&copy; {{date format="YYYY"}}. All right reserved.</p>   
+                        </div> <!-- /.copyright -->
+                    </div> <!-- /.container -->
+                </div> <!-- /.copy-right-area -->
+            </div> <!-- /#footer-bottom -->
+        </footer><!-- #colophon -->
+
+        <!-- All The JS Files
+        ================================================== --> 
+        <script src="{{asset "js/plugin.js"}}"></script> <!-- Plugin JS -->
+        <script src="{{asset "js/gatherdata.js"}}"></script> <!-- Plugin JS -->
+        <script src="{{asset "js/widget.js"}}"></script> <!-- ramble script -->
+        <script src="{{asset "js/ramble.js"}}"></script> <!-- ramble script -->
+    </body>
+</html>
+

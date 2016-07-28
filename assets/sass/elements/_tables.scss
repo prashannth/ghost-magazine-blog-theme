@@ -1,0 +1,42 @@
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+	border: 1px solid $color__border-one;
+}
+th {
+	border: 1px solid $color__border-one;
+}
+td {
+	@extend th;
+	border-width: 0 1px 1px 0;
+}
+
+/*--------------------------------------------------------------
+# Post, Page, Comments Table
+--------------------------------------------------------------*/
+.site-main {
+	.post, .page, #comments {
+		li {
+		    line-height: 1.3em;
+		}
+		table {
+		    border-collapse: collapse;
+		    margin: 20px 0;
+			width: 100%;
+			border: 1px solid $color__border-one;
+			border-left: none;
+			tbody tr.odd {
+				background: $color__white;
+			}
+			th, 
+			td {
+			    border-left: 1px solid $color__border-one;
+			    border-top: 1px solid $color__border-one;
+			    line-height: 18px;
+			    padding: 8px;
+			    text-align: left;
+			    vertical-align: top;
+			}
+		}
+	}
+} 

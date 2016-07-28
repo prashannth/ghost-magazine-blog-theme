@@ -1,0 +1,113 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! This bellow code is for loading header aria}}
+{{> "header"}}
+
+<!-- Content
+================================================== -->
+<div id="content" class="site-content">
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <h1 class="page-title"><span>Browsing Tag </span> {{tag.name}}</h1>
+                <h4 class="total-post-count">{{pagination.total}} Post Found in {{tag.name}} Tag</h4>
+            </div>
+        </div> 
+    </div><!-- /.page-header -->
+	<div class="container">
+		<div class="row">
+			<div id="main-aria" class="col-md-9">
+				<!-- Content Area -->
+				<div id="primary" class="content-area">
+					<main id="main" class="site-main">
+                        {{! The code below includes the post loop - partials/loop.hbs }}
+                        {{#foreach posts}}
+                            <article class="{{post_class}} hentry">
+                                {{#if image}}
+                                    <figure class="post-thumb">
+                                        <a href="{{url}}"><img alt="{{title}}" src="{{image}}"></a>
+                                    </figure> <!-- /.post-thumb -->
+                                {{/if}}
+                                <header class="entry-header">
+                                    <div class="cat-links">
+                                        {{tags separator=", "}}
+                                    </div>
+                                    <h2 class="entry-title"><a href="{{url}}" rel="bookmark">{{title}}</a></h2>
+                                    <div class="entry-meta">
+                                        <div class="meta-content">                                         
+                                            <div class="meta">
+                                                <span class="byline">
+                                                    <span class="author vcard">
+                                                        By: {{author}}
+                                                    </span>
+                                                </span>
+                                            </div> <!-- /.meta -->
+                                        </div>
+                                    </div> <!-- .entry-meta -->
+                                </header> <!-- /.entry-header -->
+                                <div class="entry-content text-center">
+                                    {{content words="80"}}
+                                </div> <!-- .entry-content -->
+                                <footer class="entry-footer clearfix">                          
+                                    <div class="post-readmore">
+                                        <a href="{{url}}" class="more-link">Continue reading</a>
+                                    </div>
+                                    <div class="footer-meta clearfix">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <th class="post-comment">
+                                                        <a class="comments-link" href="{{url}}#disqus_thread">0 Comments</a>
+                                                    </th>
+                                                    <th class="post-view-mobile">
+                                                        <span class="view-link">{{date format="DD MMMM YYYY"}}</span>
+                                                    </th>
+                                                    <th class="share-area">
+                                                        <script type="text/javascript">
+                                                            function softhopperPopupWindow(url, title, w, h) {
+                                                                var left = (screen.width / 2) - (w / 2);
+                                                                var top = (screen.height / 2) - (h / 2);
+                                                                return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+                                                            }
+                                                            
+                                                        </script>
+
+                                                        <!-- facebook share -->
+                                                        <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute='true'}}" onclick="softhopperPopupWindow(this.href, 'facebook-share', 580, 400); return false;"><span class="fa fa-facebook"></span></a>
+
+                                                        <!-- twitter share -->
+                                                        <a href="https://twitter.com/home?status={{url absolute='true'}}" onclick="softhopperPopupWindow(this.href, 'facebook-share', 580, 400); return false;"><span class="fa fa-twitter"></span></a>
+
+                                                        <!-- google plus share -->
+                                                        <a href="https://plus.google.com/share?url={{url absolute='true'}}" onclick="softhopperPopupWindow(this.href, 'google-plus-share', 550,530); return false;"><span class="fa fa-google-plus"></span></a>
+
+                                                        <!-- pinterest share -->
+                                                        <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><span class="fa fa-pinterest-p"></span></a>
+
+                                                        <!-- linkedin share -->
+                                                        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{url absolute='true'}}" onclick="softhopperPopupWindow(this.href, 'linkedin-share', 550,530); return false;"><span class="fa fa-linkedin"></span></a>
+                                                    </th>
+                                                    <th class="post-view">
+                                                        <span class="view-link">{{date format="DD MMMM YYYY"}}</span>
+                                                    </th>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div> <!-- /.footer-meta -->
+                                </footer> <!-- .entry-footer -->
+                            </article> <!-- /.post-->
+                        {{/foreach}}
+					</main> <!-- #main -->
+                    {{! Previous/next page links - displayed on every page }}
+                    {{pagination}}
+				</div> <!-- #primary -->
+			</div> <!-- /.col-md-9 -->
+            <div id="main-sidebar" class="col-md-3">
+                {{> "sidebar"}}
+            </div> <!-- /.col-md-3 -->
+		</div> <!-- /.row -->
+	</div> <!-- /.container -->	
+</div><!-- #content -->
+
+       

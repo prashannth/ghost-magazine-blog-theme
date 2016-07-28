@@ -1,0 +1,559 @@
+.sticky {
+	display: block;
+}
+.hentry {
+	margin: 0 0 75px;
+}
+.page-content {
+	margin: 1.4em 0;
+}
+.entry-content {
+	@extend .page-content;
+}
+.entry-summary {
+	@extend .page-content;
+}
+.page-links {
+	clear: both;
+	margin: 0 0 2.1em;
+}
+/*--------------------------------------------------------------
+# Page Heading
+--------------------------------------------------------------*/
+.header-title {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+/*--------------------------------------------------------------
+# Post Meta
+--------------------------------------------------------------*/
+.cat-links > a::after {
+    content: ",";
+    padding: 0 3px;
+}
+.cat-links > a:last-of-type::after {
+    content: "";
+}
+.content-area .entry-header .cat-links a {
+    position: relative;
+    white-space: nowrap;
+}
+.content-area .entry-header {
+	.cat-links {
+		color: $color__white;
+		display: inline-block;
+		font-size: 11px;
+		font-weight: bold;
+		letter-spacing: 2px;
+		line-height: normal;
+		padding: 7px 14px;
+		text-transform: uppercase;
+		position: relative;
+	}
+	.cat-links:before {
+		border: 1px solid;
+		bottom: -3px;
+		content: "";
+		left: -3px;
+		position: absolute;
+		right: -3px;
+		top: -3px;
+	}
+	.cat-links a {
+		position: relative;
+	}	
+	.cat-links a:hover {
+		color: $color__white;
+	}
+	.entry-meta {
+		position: relative;
+	}
+	.meta-content {
+		border-top: 1px solid $color__border-one;
+		border-bottom: 1px solid $color__border-one;		
+	}
+	.meta-content:before {
+		content: "";
+		top: 0;
+		left: 0;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		@include linier_gradient($color__white, $color__white, to right, 10%, 50%, 90%);
+	}
+	.entry-meta .meta {
+		border-left: 1px solid $color__border-one;
+		border-right: 1px solid $color__border-one;
+		display: inline-block;
+		padding: 8px 32px;
+		position: relative;
+	}
+}
+.entry-meta {
+	color: $color__meta;
+	font-size: 11px;
+	letter-spacing: 0.04em;
+	font-style: italic;
+	a {
+		color: inherit;
+	}
+	.entry-date {
+		display: inline-block;
+	}
+}
+.post-thumb {
+	> a {
+		position: relative;
+		display: block;
+		z-index: 1;
+	}
+	.overlay {
+		backface-visibility: hidden;
+		background-color: rgba(0, 0, 0, 0.3);
+		color: #fff;
+		display: block;
+		height: 100%;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+		z-index: 1;
+	}
+	.overlay:before {
+		content: " ";
+		display: inline-block;
+		height: 100%;
+		margin-right: -0.25em;
+		vertical-align: middle;
+	}
+	.overlay .fa {
+		background-color: rgba(0, 0, 0, 0.25);
+		border: 2px solid #fff;
+		border-radius: 100%;
+		font-size: 18px;
+		height: 45px;
+		line-height: 42px;
+		text-align: center;
+		vertical-align: middle;
+		width: 46px;
+	}
+}
+
+/*--------------------------------------------------------------
+# Post Format
+--------------------------------------------------------------*/
+.content-area {
+	.post {
+		position: relative;
+		.post-thumb {
+			overflow: hidden;
+		}
+	}
+	.page {
+		position: relative;
+		.post-thumb {
+			overflow: hidden;
+		}
+		.post-status-wrapper {
+			text-align: center;
+			iframe {
+				 margin: 10px auto !important;
+			}
+		}
+		.page-share {
+			text-align: center;
+			span {
+				font-size: 1.25em;
+				font-style: italic;
+				&:after {
+					content: "-";
+					position: relative;
+					vertical-align: middle;
+				}
+			}
+			a {
+				padding: 0 5px;
+			}
+		}
+	}
+	.type-attachment {
+		background: $color__white;
+		border: 1px solid $color__border-four;
+		padding: 1.9em;
+		position: relative;
+		.post-thumb {
+			overflow: hidden;
+		}
+	}
+	// Link Post Format
+	// ------------------------
+	.format-link .cat-links {
+		display: none;
+	}
+	.post-link {
+	    overflow: hidden;
+	    position: relative;
+	    z-index: 9;
+	}
+
+	.post-link-wrapper {
+	    margin: 10px;
+	    position: relative;
+	    z-index: 9;
+	    &:after {
+		    border: 1px solid $color__white;
+		    bottom: -5px;
+		    content: "";
+		    display: block;
+		    left: -5px;
+		    position: absolute;
+		    right: -5px;
+		    top: -5px;
+		    z-index: -1;	
+	    }
+		.tb {
+		    height: 100%;
+		}
+		.tb {
+		    display: table;
+		    width: 100%;
+		    padding: 2px;
+		}
+		.tb-cell {
+		    display: table-cell;
+		    vertical-align: middle;
+			> a {
+				display: block;
+				font-size: em(13px);
+				font-style: italic;
+				letter-spacing: 0.1em;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				width: 100%;
+			}
+		}
+		h2 {
+			font-family: $font__heading_title;
+			font-weight: normal;
+			font-size: 42px;
+			margin-bottom: 0;
+			margin-top: 5px;
+		}
+		.icon-area {
+			background: rgba($color__white, 0.8);
+			float: left;
+			margin-right: 11px;
+			padding: 45px;
+			position: relative;
+			&:after {
+				border-right: 1px solid $color__white;
+				content: "";
+				height: 100%;
+				position: absolute;
+				top: 0;
+				right: -6px;
+			}
+		}
+		.fa {
+		    font-size: 4em;
+		}
+		~ .images {
+			height: 100%;
+			left: 0;
+			padding-top: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: -1;
+			overflow: hidden;
+			@include prefixed(transform, translateZ(0px));
+		}
+		.link-content {
+			background: rgba(255, 255, 255, 0.8) none repeat scroll 0 0;
+			padding-left: 30px;
+			width: 100%;
+		}
+	}
+	.images img {
+	    left: 50%;
+	    max-width: none !important;
+	    position: absolute !important;
+	    top: 50%;
+	    @include prefixed(transform, translate(-50%, -50%));
+	    width: 100%;
+	}
+	// Quote Post Format
+	// ------------------------
+	.format-quote {
+		border: 1px solid $color__border-one;
+		.quote-content {
+			margin: 8px;
+		}
+		.quote-icon {
+			position: absolute;
+			left: 0;
+			right: 0;
+			a {
+				position: relative;
+				top: -55px;
+			}
+		}
+		.quote-icon a span {
+			&:before {
+			   position: relative;
+			   content: "\e601";
+			   font-family: 'glimmer';
+			   font-size: 15px;
+			   left: 2px;
+			   top: -8px;
+			}
+			&:after {
+			    position: relative;
+			    content: "\e602";
+			    font-family: 'glimmer';
+			    font-size: 15px;
+			   	right: 2px;
+			   	top: -8px;
+			}
+		}
+
+		.entry-title,
+		.entry-meta {
+			display: none;
+		}
+		.entry-content {
+			margin: 0;
+		}
+		.quote-content {
+			text-align: center;
+			position: relative;
+		}
+		.quote-content:before {
+			background: $color__white;
+			content: "\f10d";
+			font-style: normal;
+			font-family: FontAwesome;
+			font-size: 30px;
+			font-style: normal;
+			height: 10px;
+			left: 25px;
+			padding: 0 8px;
+			position: absolute;
+			top: -18px;
+		}		
+		.quote-content:after {
+			background: $color__white;
+			content: "\f10e";
+			font-style: normal;
+			font-family: FontAwesome;
+			font-size: 30px;
+			font-style: normal;
+			height: 10px;
+			right: 25px;
+			padding: 0 8px;
+			position: absolute;
+			bottom: -10px;
+		}
+		blockquote {
+			padding: 32px 25px 30px;
+			margin-left: 0 !important;
+			margin-bottom: 0;
+			margin-top: 0;
+			border: 0;
+			font-style: italic;
+			position: relative;
+			z-index: 100;
+			text-align: center;
+			&:before {
+				content: "";
+				display: block;
+				height: auto;
+				left: 0;
+				right: 0;
+				margin-top: 0;
+				padding-top: 0;
+				top: 0; 
+			}
+			&:after {
+				background: transparent;
+				width: 0;
+			}
+			p {
+				text-indent: 0;
+				padding: 0 1em;
+				margin-bottom: 10px;
+				position: relative;
+				&:first-child {
+					margin-top: 2em;
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+				cite {
+					margin-left: 0;
+					padding-left: 0;
+				}
+			}
+			.small::before,
+			footer::before,
+			footer {
+				margin-left: 0;
+			}
+			cite, a, span {
+				padding: 0;
+				font-weight: normal;
+				font-style: normal;
+				position: relative;
+			}
+			cite::before {
+			    content: "";
+			    padding-right: 0;
+			}
+		}
+		.author a {
+			font-style: italic;
+			font-size: 16px;
+		}
+		.author {
+			font-size: 16px;
+			margin-top: 0;
+			span {
+				margin-right: 7px;
+				position: relative;
+				top: -1px;
+			}
+		}
+	}
+	// Status Post Format
+	// ------------------------
+	.format-status {
+		.post-status-wrapper {
+			background-size: cover !important;
+			padding: 2.85em 0;
+			text-align: center;
+			overflow: hidden;
+			
+			.embed, iframe, object {
+				margin: 0 auto !important;
+			}
+		}
+	}
+	// Chat Post Format
+	// ------------------------
+	.format-chat {
+		.entry-content {
+			margin-bottom: 0;
+		}
+		.chat-transcript { 
+			padding: 5px 15px 30px; 
+		}
+		.chat-row { 
+		  	padding: 5px 0; 
+		  	clear: both; 
+		  	overflow: hidden;
+		  	p {
+		  		margin-bottom: 0 !important;
+		  		line-height: 1.4em;
+		  	}
+		  	cite {
+		  		font-style: normal; 
+			  	font-weight: bold; 
+		  	}
+		  	&:nth-child(2n+2) {
+				.chat-author {
+				  	float: right; 
+				  	padding: 10px  0 0 15px; 
+				}
+				.chat-text {
+				  	float: right;
+				  	background: $color__white;
+				  	border: 1px solid $color__border-four; 
+				  	&:before {
+					    float: right;
+					    margin: 5px -28px 0 0 ;
+					    border-right-color: transparent !important;	
+					    border-left-color: $color__border-four;	
+				  	}
+				}
+			}
+		}
+		.chat-author {
+		 	float: left; 
+		  	padding: 10px 15px 0 0;
+		}
+		.chat-text {
+		    padding: 10px 15px;
+		    max-width: 55%;
+		    float: left;
+		    background: $color__white;
+		    border: 1px solid $color__border-four;
+		    @include prefixed(border-radius, 2px);
+		    &:before {
+			    float: left;
+			    content: " ";
+			    display: block;
+			    width: 0;
+			    height: 0;
+			    margin: 5px 0 0 -28px;
+			    border: 6px solid transparent;
+			    border-right-color: $color__border-four;
+		    }
+		    a {
+		    	color: $color__white;
+		    	text-decoration: underline;
+		    }
+		}
+		.entry-content {
+			#readmore-add .more-link {
+				margin-top: 0 !important;
+				margin-bottom: 30px;
+			}
+			.chat-text p .more-link {
+				display: none;
+			}
+		}
+	}
+	// For twitter-embed post
+	// ------------------------
+	.format-standard {
+		.entry-content {
+			.twitter-tweet.twitter-tweet-rendered {
+				margin: auto !important;
+			}
+		}
+	}
+	// For Self Hosted Audio
+	// ----------------------
+	.format-audio {
+		.entry-title {
+			margin-top: 30px;
+		}
+		.post-media {
+		    overflow: hidden;
+		    position: relative;
+		    z-index: 9;
+		}
+		.post-media .audio-images ~ .post-audio-player {
+		    border: 0 none;
+		    bottom: 5px;
+		    left: 5px;
+		    position: absolute;
+		    right: 20px;
+		    z-index: 9;
+		}
+		.post-audio-player {
+			background: rgba($color__white, 0.8);
+			padding: 30px;
+			text-align: center;
+		}
+	}
+	.no-image {	
+		.post-format {
+			background: $header__footer-bg;
+			line-height: 55px;
+			margin-bottom: -15px;
+			margin-top: -20px;
+		}	
+	}
+}

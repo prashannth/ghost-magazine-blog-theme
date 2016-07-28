@@ -1,0 +1,102 @@
+.error-page {
+	.error-search {
+		margin-left: 5em;
+		padding: 90px 0 45px;
+	}
+	.error-image {
+		display: table;
+		margin: auto;
+		position: relative;
+		img {
+			@media only screen and (max-width: 639px) {
+				width: 100%;
+			}
+			@media only screen and (max-width: 480px) {
+				margin-left: -1.1em;
+			}
+		}
+	}
+	.goto-button {
+	 	bottom: 125px;
+	 	left: 0;
+	 	position: absolute;
+	 	right: 0;
+	 	text-align: center;
+	 	font-family: $font__heading;
+	 	color: $color__black;
+	 	text-transform: uppercase;
+	 	font-size: 13px;
+	 	@media only screen and (max-width: 599px) {
+	 		position: relative;
+	 		bottom: 0;
+	 		left: -50px;
+	 	}
+	}
+	.go-to:nth-child(1) {
+		left: -16em;
+		right: 0;
+		position: absolute;
+		top: -4px;
+		@include prefixed(transform, rotate(15deg));
+		@media only screen and (max-width: 639px) {
+			left: -14em;
+			top: 10px;
+		}		
+		@media only screen and (max-width: 599px) {
+			position: relative;
+			left: 0;
+		}
+	}	
+	.go-to:nth-child(2) {
+		left: 0;
+		right: 0;
+		position: absolute;
+		top: -4px;
+		@include prefixed(transform, rotate(-18deg));
+		@media only screen and (max-width: 639px) {
+			top: 10px;
+		}
+		@media only screen and (max-width: 599px) {
+			position: relative;
+			left: 0;
+		}
+	}
+	.go-to {
+		@include prefixed(transition, color 0.25s ease);
+		&:hover, &:focus {
+			color: $color__white;
+		}
+		@media only screen and (max-width: 599px) {
+			border: 1px solid $color__border-one;
+			padding: 13px 34px;
+			margin: 0 5px;
+			@include prefixed(transform, rotate(0) !important);
+			@include prefixed(transition, all 0.25s ease);
+		}
+		@media only screen and (max-width: 480px) {
+			width: 100%;
+			display: table;
+			margin-bottom: 15px !important;
+		}
+	}
+	.search {
+		left: -50px;
+		margin: auto;
+		position: relative;
+		width: 50%;
+		@media only screen and (max-width: 599px) {
+			margin-top: 45px;
+			width: 60%;
+		}
+		@media only screen and (max-width: 480px) {
+			width: 100%;
+		}
+	}
+	.form-controller {
+		height: 50px;
+		padding: 15px 20px;
+	}
+	.btn.btn-search {
+		padding: 14px 18px;
+	}
+}

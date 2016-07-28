@@ -1,0 +1,121 @@
+.ps-container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	text-transform: uppercase;
+	color: #555;
+	background: #fff;
+}
+
+.ps-container > div {
+	position: absolute;
+	width: 50%;
+}
+
+.ps-container > div > div,
+.ps-slidewrapper > nav,
+.ps-slides > div {
+	position: absolute;
+}
+
+.ps-header {
+	top: 0px;
+	left: 0px;
+	height: 150px;
+	z-index: 1001;
+	background: #fff;
+}
+
+.ps-header h1 {
+	color: #ccc;
+	line-height: 150px;
+	margin: 0;
+	padding: 0 50px;
+	font-weight: 200;
+	font-size: 14px;
+	letter-spacing: 10px;
+}
+
+.ps-contentwrapper {
+	top: 150px;
+	bottom: 0px;
+	overflow: hidden;
+	z-index: 1000;
+}
+
+.ps-content {
+	background: #fff;
+	width: 100%;
+	height: 100%;
+	padding: 50px;
+}
+
+
+.ps-content a:last-child:before {
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+	padding-right: 5px;
+}
+
+.ps-slidewrapper {
+	right: 0px;
+	top: 0px;
+	height: 100%;
+	overflow: hidden;
+}
+
+.ps-slides {
+	top: 0px;
+	bottom: 200px;
+	width: 100%;
+}
+
+.ps-slides > div {
+	width: 100%;
+	height: 100%;
+	box-shadow: inset 0 0 0 9999px rgba(179,157,250,0.1);
+}
+
+
+
+.ps-slides > div,
+.ps-slidewrapper > nav > a {
+	background-color: #fff;
+	background-position: center top;
+	background-repeat: no-repeat;
+	-webkit-background-size: auto 100%;
+	-moz-background-size: auto 100%;
+	background-size: auto 100%;
+}
+.ps-move {
+	-webkit-transition: top 400ms ease-out;
+	-moz-transition: top 400ms ease-out;
+	-o-transition: top 400ms ease-out;
+	-ms-transition: top 400ms ease-out;
+	transition: top 400ms ease-out;
+}
+
+
+/*.ps-contentwrapper, 
+.ps-slidewrapper {
+	width: 50%;
+}
+
+.ps-slides > div {
+	background-position: 50% 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 150px;
+	height: 150px;
+}*/
+
+
+
+
+
+
+
+
+

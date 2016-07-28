@@ -1,0 +1,98 @@
+<footer id="colophon" class="site-footer">
+	<div id="footer-top" class="hidden">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="footer-top-content">                            
+                        <tbody>
+                            <tr>
+                                <th class="news-letter">
+                                    <span class="news-letter-title">Newsletter</span>
+                                     <form id="mc-form">
+                                        <div class="input-group">
+                                            <input type="email" id="mc-email" name="EMAIL" class="form-control" placeholder="Enter Your Email">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-default" type="submit">Send</button>
+                                            </span>
+                                        </div>
+                                        <div id="mc-email-news"></div>
+                                    </form>
+                                </th>
+                                <th class="social-area">
+                                    <span>Social Profile</span>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div> <!-- /.row -->
+        </div> <!-- /.container --> 
+	</div> <!-- #footer-top" -->
+
+    <!-- Footer Middle -->
+    <div id="footer-middle">
+        <div class="container">
+            <div class="row">
+                <script>
+                    if (typeof(Footer_Widget_Order) != "undefined") {
+                        // Showing Widgets by order. Max three widgets allowed.
+                        var i = 0;
+                        for ( var key in Footer_Widget_Order ) {   
+                            if (i === 4) { break; }
+                            i++;       
+                        
+                            if ( Footer_Widget_Order[key] == "Latest_Posts_Widget" ) {
+                              document.write('<div class="col-md-3 col-sm-6">{{> "widgets/latest-posts-widget"}}</div>');
+                            } else if ( Footer_Widget_Order[key] == "Tags_Widget" ) {
+                              document.write('<div class="col-md-3 col-sm-6">{{> "widgets/tags-widget"}}</div>');
+                            } else if ( Footer_Widget_Order[key] == "Ads_Widget" ) {
+                              document.write('<div class="col-md-3 col-sm-6">{{> "widgets/ads-widget"}}</div>');
+                            } else if ( Footer_Widget_Order[key] == "Social_Widget" ) {
+                              document.write('<div class="col-md-3 col-sm-6">{{> "widgets/social-widget"}}</div>');
+                            } else if ( Footer_Widget_Order[key] == "Navigation_Widget" ) {
+                              document.write('<div class="col-md-3 col-sm-6">{{> "widgets/navigation-widget"}}</div>');
+                            } else if ( Footer_Widget_Order[key] == "Facebook_Page_Widget" ) {
+                              document.write('<div class="col-md-3 col-sm-6">{{> "widgets/facebook-widget"}}</div>');
+                            } else if ( Footer_Widget_Order[key] == "Twitter_Widget" ) {
+                              document.write('<div class="col-md-3 col-sm-6">{{> "widgets/twitter-widget"}}</div>');
+                            } else if ( Footer_Widget_Order[key] == "Googleplus_Page_Widget" ) {
+                              document.write('<div class="col-md-3 col-sm-6">{{> "widgets/google-plus-widget"}}</div>');
+                            } else if ( Footer_Widget_Order[key] == "About_Widget" ) {
+                              document.write('<div class="col-md-3 col-sm-6">{{> "widgets/about-info"}}</div>');
+                            } else if ( Footer_Widget_Order[key] == "Mailchimp_Widget" ) {
+                              document.write('<div class="col-md-3 col-sm-6">{{> "widgets/newsletter"}}</div>');
+                            } else if ( Footer_Widget_Order[key] == "Flickr_Widget" ) {
+                              document.write('<div class="col-md-3 col-sm-6">{{> "widgets/flickralbum"}}</div>');
+                            } 
+                        }   
+                    }   
+                </script>
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->         
+    </div> <!-- #footer-middle -->
+
+    <div id="footer-bottom">
+        <div class="container-fluid">
+            <div class="row">                    
+                <div class="widget widget_instafeed hidden clearfix">
+                    <div class="widget-title-area">
+                        <h5 class="widget-title"><span>Instagram</span></h5> <!-- /.widget-title -->
+                    </div> <!-- /.widget-title-area -->
+                    <div id="instafeed"></div> <!-- /.instafeed-content -->
+                </div> <!-- /.ramble_about_widget --> 
+
+                <div class="widget social_share_link clearfix">
+                    <div class="social-link"></div>        
+                </div> <!-- /.ramble_about_widget -->     
+            </div> <!-- /.row -->             
+        </div> <!-- /.container-fluid -->
+        <div class="clear"></div>
+        <div class="copy-right-area">                
+            <div class="container">
+                <div class="copyright">
+                    <p>Copyright&copy; 2016 Softhopper. All right reserved.</p>   
+                </div> <!-- /.copyright -->
+            </div> <!-- /.container -->
+        </div> <!-- /.copy-right-area -->
+    </div> <!-- /#footer-bottom -->
+</footer><!-- #colophon -->

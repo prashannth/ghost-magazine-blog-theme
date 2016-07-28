@@ -1,0 +1,118 @@
+.about-me {
+	.container {
+		overflow: hidden;
+	}
+	.header-title {
+		margin-bottom: 0;
+	}
+	.entry-content {
+		margin-bottom: 30px;
+	}
+	.entry-footer {
+		position: relative;
+		overflow: hidden;
+		.follow-link {
+			float: left;
+			position: relative;
+			margin-top: 40px;
+			span {
+				margin-right: 10px;
+			}
+			a {
+				margin: 0 5px;
+			}
+		}
+		.author-sign {
+			float: right;
+			text-align: center;
+		}
+		.author-sign h3 {
+			margin-top: 0;
+			font-size: 16px;
+		}
+	}
+
+	.author-image {
+		bottom: -95px;
+		height: 220px;
+		left: 0;
+		margin: auto;
+		position: absolute;
+		right: 0;
+		width: 220px;
+		img {
+			border: 10px solid $color__white;
+			border-radius: 50%;
+			height: 100%;
+			width: 100%;
+		}
+	}
+	.author-cover {
+		background-position: 50% 50% !important;
+		background-size: cover !important;
+		background-repeat: no-repeat !important;
+		height: 30em;
+		position: relative;
+	}
+	.author-details {
+		padding-top: 60px;
+		padding-bottom: 45px;
+	}
+	.about-details .entry-content > .row > .col-md-12 {
+		text-align: center;
+	}	
+	.skill-details {
+		border: 1px solid $color__border-one;
+		margin-top: 75px;
+		text-align: center;
+		padding: 20px;
+	}
+	.skill-details .circliful {
+		background: $color__white;
+	 	margin: auto;
+	 	font-family: $font__heading;
+	}
+	.skill-percentage {
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 38px;
+	}
+	.skill-content {
+		margin-top: 60px;
+	}	
+	.skill-content h4 {
+		margin-bottom: 20px;
+	}	
+	.skill-content p {
+		margin-bottom: 0;
+	}
+	#author-skill .col-md-4 {
+		padding: 25px;
+	}
+}
+.section-name {
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 35px;
+	color: $color__text-main;
+}
+.section-name {
+	position: relative;
+}
+.section-name::before {
+  border-bottom: 1px solid #ebebeb;
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 50%;
+}
+.section-name span {
+	background: $color__white;
+	padding: 0 15px;
+	position: relative;
+	z-index: 3;
+}
+.section-name::before {
+	left: 0;
+}

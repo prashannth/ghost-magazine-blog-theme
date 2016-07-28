@@ -1,0 +1,159 @@
+<div class="preloader hidden" id="preloader">
+    <div class="preloader-logo">
+        {{#if @blog.logo}}
+            <img class="img-responsive" src="{{@blog.logo}}" alt="{{@blog.title}}" />
+        {{else}}
+            <img class="img-responsive" src="{{asset "images/logo.png"}}" alt="{{@blog.title}}" />
+        {{/if}}
+    </div> <!-- /.preloader-logo -->
+    <div class="loader">
+        <script type="text/javascript">
+            if (typeof(Pre_Loader) != "undefined") {
+                var preloader_animated_icon = Pre_Loader['animation_icon'];
+                if ( preloader_animated_icon == 1 ) {
+                    var animated_icon =  "fa-spinner fa-pulse";
+                } else if ( preloader_animated_icon == 2 ) {
+                    var animated_icon = "fa-spinner fa-spin";
+                } else if ( preloader_animated_icon == 3 ) {
+                    var animated_icon = "fa-circle-o-notch fa-spin";
+                } else if ( preloader_animated_icon == 4 ) {
+                    var animated_icon = "fa-refresh fa-spin";
+                } else if ( preloader_animated_icon == 5 ) {
+                    var animated_icon = "fa-cog fa-spin";
+                } else {
+                    var animated_icon = "";
+                }
+            } else {
+                var animated_icon = "";
+            }
+            
+            document.write('<i class="fa '+animated_icon+'"></i>');
+        </script>
+    </div>  <!-- /.loader -->
+</div> <!-- /.preloader -->
+
+<script type="text/javascript">
+    var preloader = getUrlParameter('preloader');
+    if ( preloader == "on" ) {
+        document.getElementById("preloader").classList.remove("hidden");
+    } else {
+        if (typeof(Pre_Loader) != "undefined") {
+            if ( Pre_Loader['show'] == true ) {
+               document.getElementById("preloader").classList.remove("hidden");
+            }
+        }
+    }
+</script>
+
+<header id="masthead" class="site-header">
+   <!-- Header Mobile -->
+    <div id="header-mobile">
+       <!-- Mobile Menu -->
+        <div class="header-mobile-area">               
+            <div class="menucontent overlaybg"></div>
+            <div class="menuexpander slideRight">
+                <a id="navToggle" class="animated-arrow slideLeft"><span></span></a>
+                <span id="menu-marker"></span>
+            </div>
+        </div> <!-- /.header-mobile-area -->
+        <div id="mobile-menu">
+            <nav class="top-menu slideLeft clearfix">
+                <div class="menu-wrapper">
+                    <div id="menu-wrap"></div>             
+                </div> <!-- /.menu-wrapper -->
+            </nav> <!-- /.menu  -->
+        </div> <!-- /.#mobile menu -->
+    </div> <!-- /#header-mobile -->
+
+    <!-- Sticky Header -->
+    <div id="sticky-header">
+        <div class="container">
+            <div class="row">                    
+                <div class="sticky-left">
+                    <div class="menu-content"></div>
+                </div>
+                <div class="sticky-right">
+                    <div class="sticky-social"></div>
+                </div>
+            </div> <!-- /.row -->            
+        </div> <!-- /.container -->
+    </div> <!-- /#sticky-header -->
+
+    <!-- Header Top -->
+    <div id="header-top">
+        <div class="container">
+            <div class="row">
+                <div class="header-search">
+                    <div class="search default">
+                        <form class="searchform">
+                            <div class="input-group">
+                                <input type="search" placeholder="Search Here..." class="form-control heading-search" >
+                                <span class="input-group-btn">
+                                    <button id="submit-btn" type="button" class="btn btn-default"><i class="fa fa-search"></i></button>
+                                </span>
+                            </div>
+                        </form>
+                    </div> <!-- /.search -->
+                </div> <!-- /.header-search -->
+                <div class="header-social"></div> <!-- /.top-social --> 
+                <div id="heading-search-result" class="heading-search-result"></div>
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </div> <!-- /#header-top -->
+    
+    <!-- Header Middle Part-->
+    <div id="header-middle">
+        <div class="container">
+            <div class="row">
+                <div class="header-banner col-md-9">
+                    <!-- Site Logo -->
+                    <div id="site-logo">
+                        <a href="{{@blog.url}}" id="site-logo-main" class="site-logo">
+                            {{#if @blog.logo}}
+                            <div class="logo" style="background-image:url({{@blog.logo}})"></div>
+                            {{else}}
+                            <div class="logo" style="background-image:url({{@blog.url}}/assets/images/logo.png)"></div>
+                            {{/if}}
+                        </a> 
+                    </div> <!-- /#site-logo -->
+
+                    <!-- Main Navigation -->
+                    <nav id="main-nav" class="site-navigation top-navigation">
+                        <div class="menu-wrapper">
+                            <div class="menu-content">
+                                <script>
+                                    if (typeof(dynamic_ghost_nav) != "undefined") {
+                                     if ( dynamic_ghost_nav === true  ) {
+                                            document.write('{{navigation}}');
+                                        } else {
+                                            document.write('{{> "navigation-custom"}}');
+                                        }
+                                    } else {
+                                        document.write('{{navigation}}');
+                                    }
+                                </script>
+                            </div>
+                        </div> <!-- /.menu-wrapper --> 
+                    </nav> <!-- /#main-nav -->                  
+                </div> <!-- /.col-md-9 -->
+
+                <!-- Header widget -->
+                <div class="header-widget col-md-3 hidden-sm hidden-xs hidden">
+                    <div class="widget about_info">                                
+                        <div id="author-info">
+                            <div id="author-image">
+                                <div class="image" ></div> 
+                            </div> <!-- /#author-image -->
+                            <div id="author-details">
+                                <h3 class="author-name">Jhon Smith</h3>
+                                <span class="author-skill">Web Debeloper.</span>
+                                <span class="position">Co-Founder/CEO At SoftHopper</span>   
+                            </div> <!-- /#author-details -->
+                            <div class="author-social"></div>                              
+                        </div> <!-- /#author-info -->                           
+                    </div> <!-- /.widget -->
+                </div> <!-- /.col-md-3 -->
+            </div> <!-- /.row -->
+        </div> <!-- /.container --> 
+    </div> <!-- /#header-middle -->
+</header> <!-- /.site-header -->

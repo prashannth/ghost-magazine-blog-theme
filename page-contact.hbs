@@ -1,0 +1,135 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! This bellow code is for loading header aria}}
+{{> "header"}}
+
+{{! This code to show Post in single page }}
+{{#post}}
+
+        <!-- Main Content
+        ================================================== -->
+        <div id="content" class="site-content contact-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="header-title">
+                            <h2 class="section-title"><span>{{title}}</span></h2>
+                        </div> <!-- /.header-title --> 
+                    </div> <!-- /.col-md-12 -->
+                </div> <!-- /.row -->
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Maps Area -->
+                        <div class="gmaps-area">
+                            <div id="gmaps"></div>                                   
+                        </div> <!-- /.gmaps-area -->
+                    </div>
+                </div> <!-- /.row -->
+
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <!-- Contact Details -->
+                        <div class="contact-details">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div id="address-main">
+                                        <span><a target="_blank" href="http://www.softhopper.net">SoftHopper</a> Creative Agency, 02 Melborn, Australia</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="entry-content">
+                                        {{content}}
+                                    </div> <!-- /.entry-content -->  
+                                </div>
+                            </div> <!-- /.row -->
+
+                            <div class="row">
+                                <div class="col-md-4 col-sm-6">
+                                   <div class="phone-area box">
+                                       <div class="icon-area">
+                                           <i class="fa fa-phone"></i>
+                                       </div>
+                                       <div class="details">
+                                           <h4>Call Us</h4>
+                                           <span></span>
+                                       </div>
+                                   </div> 
+                                </div> <!-- /.col-md-4 -->
+
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="email-area box">
+                                       <div class="icon-area">
+                                           <i class="fa fa-envelope"></i>
+                                       </div>
+                                       <div class="details">
+                                           <h4>Email</h4>
+                                           <span></span>
+                                       </div>   
+                                    </div>
+                                </div> <!-- /.col-md-4 -->
+
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="web-area box">
+                                       <div class="icon-area">
+                                           <i class="fa fa-globe"></i>
+                                       </div>
+                                       <div class="details">
+                                           <h4>Web</h4>
+                                           <span></span>
+                                       </div>   
+                                    </div>
+                                </div> <!-- /.col-md-4 -->
+                            </div> <!-- /.row -->
+
+                            <div class="row" id="contact-form-wrap">
+                                <div class="col-md-12">
+                                    <div class="contact-respond" id="respond">                            
+                                        <form id='contact_form' method="POST">
+                                            <div class="row">
+                                                <div class="col-md-4 padding-right">
+                                                    <p>
+                                                        <input type='text' name='name' id='name' class="form-controller"  aria-required="true" placeholder="Name*">
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-4 padding-left-right">
+                                                    <p>
+                                                        <input type='text' name='email' id='email' class="form-controller"  aria-required="true" placeholder="Email*">
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-4 padding-left">
+                                                    <p>
+                                                        <input type='text' name='subject' id='subject' class="form-controller"  aria-required="true" placeholder="Subject*">
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <p>
+                                                        <textarea name='message' id='message' class="form-controller" aria-required="true" rows="8" cols="45" placeholder="Write a Comment...."></textarea>
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <p class="form-submit">
+                                                        <input type="text" name="_gotcha" style="display:none" />
+                                                        <input type="hidden" name="_subject" value="Subject">
+                                                        <input type="hidden" name="_cc" value="email@cc.com">
+                                                        <input id="submit" type="submit" value="SEND IT NOW">
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </form>  
+                                    </div><!-- #respond --> 
+                                </div> <!-- /.col-md-12 -->
+                            </div> <!-- /.row -->
+                        </div> <!-- /.contact-details -->
+                    </div> <!-- /.col-md-10 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div><!-- #content -->
+
+        <script src="http://maps.googleapis.com/maps/api/js?sensor=true"></script><!-- gmaps -->
+        <script src="/assets/js/gmaps.js"></script> <!-- Plugin JS -->
+
+{{/post}}

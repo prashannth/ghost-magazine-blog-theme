@@ -1,0 +1,22 @@
+<div class="{{post_class}} hentry post-warreper">
+    {{#if image}}
+    <figure class="post-thumb">
+        <a href="{{url}}"><img alt="{{title}}" src="{{image}}"></a>
+    </figure> 
+    {{/if}}
+    <div class="entry-header">
+        <div class="entry-meta"> 
+            {{#if tags}} 
+                <span class="cat-links"> {{tags separator=""}} </span>
+                <span class="devider">/</span> 
+            {{/if}} 
+            <span class="entry-date">{{date format="DD MMMM YYYY"}}</span>
+        </div>
+        <h2 class="entry-title"><a href="{{url}}" rel="bookmark">{{title}}</a></h2>
+        <div class="entry-content hidden"> {{content words="40"}} </div>
+    </div>
+</div>
+
+
+
+

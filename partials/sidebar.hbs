@@ -1,0 +1,35 @@
+<div id="secondary" class="widget-area">
+    <script>
+        if (typeof(Sidebar_Widget_Order) != "undefined") {
+            // Showing Widgets by order
+            for ( var key in Sidebar_Widget_Order ) {
+
+                if ( Sidebar_Widget_Order[key] == "Latest_Posts_Widget" ) {
+                  document.write('{{> "widgets/latest-posts-widget"}}');
+                } else if ( Sidebar_Widget_Order[key] == "Tags_Widget" ) {
+                  document.write('{{> "widgets/tags-widget"}}');
+                } else if ( Sidebar_Widget_Order[key] == "Ads_Widget" ) {
+                  document.write('{{> "widgets/ads-widget"}}');
+                } else if ( Sidebar_Widget_Order[key] == "Social_Widget" ) {
+                  document.write('{{> "widgets/social-widget"}}');
+                } else if ( Sidebar_Widget_Order[key] == "Navigation_Widget" ) {
+                  document.write('{{> "widgets/navigation-widget"}}');
+                } else if ( Sidebar_Widget_Order[key] == "Facebook_Page_Widget" ) {
+                  document.write('{{> "widgets/facebook-widget"}}');
+                } else if ( Sidebar_Widget_Order[key] == "Twitter_Widget" ) {
+                  document.write('{{> "widgets/twitter-widget"}}');
+                } else if ( Sidebar_Widget_Order[key] == "Googleplus_Page_Widget" ) {
+                  document.write('{{> "widgets/google-plus-widget"}}');
+                } else if ( Sidebar_Widget_Order[key] == "About_Widget" ) {
+                  document.write('{{> "widgets/about-info"}}');
+                } else if ( Sidebar_Widget_Order[key] == "Mailchimp_Widget" ) {
+                  document.write('{{> "widgets/newsletter"}}');
+                } else if ( Sidebar_Widget_Order[key] == "Flickr_Widget" ) {
+                  document.write('{{> "widgets/flickralbum"}}');
+                } 
+            }
+        }
+    </script> 
+</div> <!-- #secondary -->
+<!-- Widget Mobile -->
+<div id="mobile-widget-area"></div> <!-- /#mobile-widget-area -->
