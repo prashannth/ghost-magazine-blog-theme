@@ -34,7 +34,7 @@ blockquote {
 	&:hover, &:focus, &:active:focus {
 		background: rgba($color__theme-main, 0.8);
 	}
-} 
+}
 .small-border {
 	background: $color__theme-main;
 }
@@ -166,15 +166,15 @@ input[type="submit"] {
 	.entry-header {
 		.entry-meta {
 			a:hover {
-				color: $color__theme-main;	
+				color: $color__theme-main;
 			}
 		}
 		.cat-links::before {
 			border-color: $color__theme-main;
-		}		
+		}
 		.cat-links {
 			background: $color__theme-main;
-		}		
+		}
 	}
 	.entry-content {
 		.edit-link {
@@ -276,7 +276,7 @@ input[type="submit"] {
 	}
 	.blog-widget .widget {
 		background: $color__theme-main;
-	}	
+	}
 	#blog-main {
 		background:  $color__theme-main;
 	}
@@ -298,14 +298,14 @@ input[type="submit"] {
 		color: $color__theme-main !important;
 	}
 	.megamenu {
-		background: $color__theme-main; 
+		background: $color__theme-main;
 	}
 }
 
 /* pagination */
 .navigation {
 	.nav-links {
-		> li {			
+		> li {
 			&.active {
 				a, span {
 					background: $color__theme-main;
@@ -337,7 +337,7 @@ input[type="submit"] {
 
 
 /* gallery */
-.gallery-one .owl-controls .owl-nav div, 
+.gallery-one .owl-controls .owl-nav div,
 .gallery-two .full-view .owl-controls .owl-nav div {
 	color: $color__theme-main;
 }
@@ -349,11 +349,11 @@ input[type="submit"] {
 	}
 }
 .gallery-two {
-	.list-view {	
+	.list-view {
 		.owl-controls .owl-buttons div {
 			background: $color__theme-main;
 		}
-	} 
+	}
 }
 .author-info {
 	.authors-social a:hover {
@@ -364,11 +364,11 @@ input[type="submit"] {
 .related-post .related-post-title span::before,
 .related-post .related-post-title span::after,
 .comments-area .comments-title span::before,
-.comments-area .comments-title span::after, 
+.comments-area .comments-title span::after,
 .comment-reply-title span::before,
 .comment-reply-title span::after {
 	color: $color__theme-main;
-}  
+}
 //magazine
 #category-hot-post {
 	.carousel-indicators li {
@@ -454,25 +454,25 @@ input[type="submit"] {
 	  background: rgba($color__theme-main, 0.85);
 	}
 }
-.widget_categories li:hover > a, 
+.widget_categories li:hover > a,
 .widget_archive li:hover > a {
   color: $color__theme-main;
 }
 
-.widget_categories li:hover > .count, 
+.widget_categories li:hover > .count,
 .widget_archive li:hover > .count {
   color: $color__theme-main;
 }
 
-.widget_categories li.current-cat > a, 
-.widget_categories li.current-cat-parent > a, 
-.widget_archive li.current-cat > a, 
+.widget_categories li.current-cat > a,
+.widget_categories li.current-cat-parent > a,
+.widget_archive li.current-cat > a,
 .widget_archive li.current-cat-parent > a {
   color: $color__theme-main;
 }
-.widget_categories li.current-cat > .count, 
-.widget_categories li.current-cat-parent > .count, 
-.widget_archive li.current-cat > .count, 
+.widget_categories li.current-cat > .count,
+.widget_categories li.current-cat-parent > .count,
+.widget_archive li.current-cat > .count,
 .widget_archive li.current-cat-parent > .count {
   color: $color__theme-main;
 }
@@ -553,10 +553,10 @@ input[type="submit"] {
 
 .shop_table.cart .coupon .button,
 .shop_table.cart .cart-update .button,
-.cart-collaterals .ts-shipping_button button, 
-.cart-collaterals .ts-shipping_button input[type="button"], 
-.cart-collaterals .ts-shipping_button input[type="reset"], 
-.cart-collaterals .ts-shipping_button input[type="submit"], 
+.cart-collaterals .ts-shipping_button button,
+.cart-collaterals .ts-shipping_button input[type="button"],
+.cart-collaterals .ts-shipping_button input[type="reset"],
+.cart-collaterals .ts-shipping_button input[type="submit"],
 .cart-collaterals .checkout .checkout-button,
 .product-details .product-description .single_add_to_cart_button {
 	&:hover {
@@ -594,13 +594,13 @@ input[type="submit"] {
 	background: rgba($color__theme-main, 0.1);
 	&.footer-top-widget {
 		background: $color__theme-main;
-	}	
+	}
 	&.footer-top-widget .widget {
 		background: $color__theme-main;
-	}	
+	}
 	.newsletter #subscribe-btn:hover {
 		background: $color__theme-main;
-		border-color: $color__theme-main;		
+		border-color: $color__theme-main;
 	}
 	.social-area > a {
 		color: $color__theme-main;
@@ -617,7 +617,7 @@ input[type="submit"] {
 			background: $color__theme-main;
 		}
 	}
-	.widget_categories ul li .count:hover, 
+	.widget_categories ul li .count:hover,
 	.widget_archive ul li .count:hover {
 		background: $color__theme-main;
 		border: 1px solid $color__theme-main;
@@ -628,7 +628,7 @@ input[type="submit"] {
 		background: $color__theme-main;
 	}
 	#instafeed .list a:after {
-		background: rgba($color__theme-main, 0.6);
+		background: rgba($color__theme-main, 0.3);
 	}
 }
 
