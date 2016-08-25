@@ -318,7 +318,7 @@
             if ( Url == "Section_title" ) {
                 continue;
             }
-    	    $('#author-skill .author-skills-items').append('<div class="col-md-4"><div class="skill-details"><div class="skill-percentage"><div class="skill" data-startdegree="'+About_Page_skills[Url][0]+'" data-dimension="120" data-text="'+About_Page_skills[Url][0]+'%" data-width="30" data-fontsize="18" data-percent="'+About_Page_skills[Url][0]+'" data-fgcolor="#95cac5" data-bgcolor="#eee"></div></div><div class="skill-content"><h4>'+Url+'</h4><p>'+About_Page_skills[Url][1]+'</p></div></div></div>');
+    	    $('#author-skill .author-skills-items').append('<div class="col-md-4"><div class="skill-details"><div class="skill-percentage"><div class="skill" data-startdegree="'+About_Page_skills[Url][0]+'" data-dimension="120" data-text="'+About_Page_skills[Url][0]+'%" data-width="30" data-fontsize="18" data-percent="'+About_Page_skills[Url][0]+'" data-fgcolor="#ff691f" data-bgcolor="#eee"></div></div><div class="skill-content"><h4>'+Url+'</h4><p>'+About_Page_skills[Url][1]+'</p></div></div></div>');
     	}
     }
 
