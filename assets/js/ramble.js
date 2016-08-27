@@ -383,8 +383,8 @@
                     var longitude = Contact_Info['map_longitude'];
                     var icon = Contact_Info['map_icon'];
                 } else {
-                    var latitude = 43.04446;
-                    var longitude = -76.130791;
+                    var latitude = 12.9;
+                    var longitude = 77.6;
                     var icon = "/assets/images/map-icon.png";
                 }
 
