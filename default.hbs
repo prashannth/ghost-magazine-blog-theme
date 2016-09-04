@@ -8,10 +8,10 @@
                 {{author.name}} | {{@blog.title}}
             {{else}}
                 {{meta_title}} | {{meta_description}}
-                {{#is "post, page"}} 
-                    {{@blog.title}} 
-                {{/is}} 
-            {{/is}} 
+                {{#is "post, page"}}
+                    {{@blog.title}}
+                {{/is}}
+            {{/is}}
         </title>
         <meta name="description" content="{{meta_description}}" />
         <meta name="HandheldFriendly" content="True" />
@@ -48,7 +48,7 @@
         {{{body}}}
 
         <!-- Footer
-        ================================================== --> 
+        ================================================== -->
 		{{! Footer Section }}
         {{> "footer"}}
 
@@ -56,10 +56,23 @@
         {{ghost_foot}}
 
         <!-- All The JS Files
-        ================================================== --> 
+        ================================================== -->
         <script src="{{asset "js/plugin.js"}}"></script> <!-- Plugin JS -->
         <script src="{{asset "js/gatherdata.js"}}"></script> <!-- Plugin JS -->
         <script src="{{asset "js/widget.js"}}"></script> <!-- ramble script -->
         <script src="{{asset "js/ramble.js"}}"></script> <!-- ramble script -->
+
+        <!-- The Internet Defense League
+        ================================================== -->
+        <script type="text/javascript">
+        window._idl = {};
+        _idl.variant = "modal";
+        (function() {
+            var idl = document.createElement('script');
+            idl.async = true;
+            idl.src = 'https://members.internetdefenseleague.org/include/?url=' + (_idl.url || '') + '&campaign=' + (_idl.campaign || '') + '&variant=' + (_idl.variant || 'modal');
+            document.getElementsByTagName('body')[0].appendChild(idl);
+        })();
+        </script>
 	</body>
 </html>
